@@ -1,0 +1,421 @@
+#ageverify_content #ageverify_choices {
+  margin-top: 35px;
+}
+#ageverify_content #age #ageverify_choices a {
+  display: inline-block;
+  border-radius: 5px;
+  /* color: #141414; */
+  border: 1px solid #1a1918;
+  padding: 12px 40px;
+  outline: 0;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: all ease-in 0.2s;
+  text-decoration: none;
+}
+#ageverify_content #age #ageverify_choices a:hover {
+  background: #fece14;
+  transition: all ease-in 0.2s;
+  color: #000;
+  border: 1px solid #000;
+}
+#ageverify_overlay {
+  position: fixed;
+  left: 50%;
+  z-index: 1;
+  display: grid;
+
+  justify-content: center;
+  align-items: center;
+  background-color: #ffcc00;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 10px auto;
+  transform: translate(-50%, -50%);
+}
+
+#ageverify_overlay img {
+  /* width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: 50% 100%;
+  border-radius: 15%;
+  position: static; */
+
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  object-position: 50% 100%;
+  /* object-position: center;  */
+  /* border-radius: 25%;  */
+  /* box-sizing: border-box; */
+  position: static;
+  padding: 5px;
+  overflow: hidden;
+}
+
+#ageverify_content {
+  max-width: 600px;
+  height: 400px;
+  width: 100%;
+  /* height: 100%; */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: grid;
+}
+
+#ageverify_content #header {
+  background-color: #181818;
+  border-radius: 15px 15px 0px 0px;
+  font-size: 25px;
+  height: 210px;
+  padding-top: 20px;
+}
+
+#ageverify_content h2 {
+  color: #ffffff;
+  padding-top: 75px;
+  font-size: 35px;
+  text-align: center;
+}
+
+#ageverify_content h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 255px;
+  border-top: 3px solid white;
+  width: 80px;
+}
+
+#ageverify_content p {
+  color: #ffffff;
+  font-size: 23px;
+  padding-top: 15px;
+}
+
+#ageverify_content #age span {
+  color: #111110;
+  font-size: 25px;
+  background-color: #fece14;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bolder;
+}
+
+#ageverify_choices {
+  color: #111110;
+  font-size: 25px;
+  background-color: #fece14;
+  width: 100%;
+}
+
+#ageverify_content #age {
+  background-color: #fece14;
+  border-radius: 0px 0px 15px 15px;
+  padding-top: 35px;
+  height: 210px;
+}
+
+#ageverify_content #age::before {
+  content: "";
+  position: absolute;
+  top: 230px;
+  left: 47%;
+  transform: rotate(180deg);
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-bottom: 20px solid #000;
+}
+
+.ageverify_yes {
+  background-color: #6bb52f;
+  color: black;
+  width: 60px;
+}
+
+.ageverify_no {
+  background-color: black;
+  color: white;
+  width: 60px;
+}
+
+#ageverify_content #age #ageverify_choices .ageverify_yes:hover {
+  background-color: green;
+  color: white;
+  border-color: green;
+}
+
+#ageverify_content #age #ageverify_choices .ageverify_no:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+#ageverify_content #age p {
+  color: #000 !important;
+  font-size: 16px !important;
+  padding-top: 15px !important;
+}
+
+@media (max-width: 768px) {
+
+  #ageverify_content #age #ageverify_choices a {
+    display: inline-block;
+    border-radius: 5px;
+    /* color: #141414; */
+    border: 1px solid #1a1918;
+    padding: 12px 30px;
+    outline: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: all ease-in 0.2s;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  #ageverify_overlay {
+    position: absolute;
+    left: 50%;
+    /* top: 0; */
+  
+    z-index: 1;
+    /* display: grid; */
+    /* max-width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    justify-content: center;
+    align-items: center;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px auto;
+    transform: translate(-50%, -50%);
+  }
+
+  #ageverify_overlay img {
+    width: 80px;
+  }
+
+  #ageverify_content {
+    height: 400px;
+    width: 90%;
+    /* position: relative; */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: grid;
+  }
+
+  #header {
+    position: initial;
+  }
+
+  #age{
+    position: initial;
+  }
+
+  #ageverify_content #age span {
+    color: #111110;
+    font-size: 25px;
+    background-color: #fece14;
+    width: 100%;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: bolder;
+  }
+
+  #ageverify_content #age::before {
+    content: "";
+    position: absolute;
+    top: 229px;
+    left: 46%;
+    transform: rotate(180deg);
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 20px solid #000;
+  }
+
+  #ageverify_content #age p {
+    color: #000 !important;
+    font-size: 18px !important;
+    padding-top: 15px !important;
+  }
+
+
+  @media (max-width: 480px) {
+
+    #ageverify_content #age #ageverify_choices a {
+      display: inline-block;
+      border-radius: 5px;
+      /* color: #141414; */
+      border: 1px solid #1a1918;
+      padding: 12px 28px;
+      outline: 0;
+      margin-left: 5px;
+      margin-right: 5px;
+      transition: all ease-in 0.2s;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    #ageverify_overlay {
+      width: 100px;
+      height: 100px;
+      transform: translate(-50%, -50%);
+    }
+
+    #ageverify_overlay img {
+      width: 60px;
+    }
+
+    #ageverify_content {
+      height: 350px;
+    }
+
+    #ageverify_content h2 {
+      color: #ffffff;
+      padding-top: 60px;
+      font-size: 30px;
+      text-align: center;
+    }
+    
+    #ageverify_content h2::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 230px;
+      border-top: 3px solid white;
+      width: 66px;
+    }
+    
+    #ageverify_content p {
+      color: #ffffff;
+      font-size: 20px;
+      padding-top: 15px;
+    }
+
+    #ageverify_content #age span {
+      font-size: 25px;
+    }
+
+    #ageverify_content #age::before {
+      content: "";
+      position: absolute;
+      top: 229px;
+      left: 44%;
+      transform: rotate(180deg);
+      border-left: 18px solid transparent;
+      border-right: 18px solid transparent;
+      border-bottom: 20px solid #000;
+    }
+
+    #ageverify_content #age p {
+      font-size: 16px !important;
+      padding:10px;
+    }
+  }
+
+
+
+  @media (max-width: 345px) {
+
+    #ageverify_content #age #ageverify_choices a {
+      display: inline-block;
+      border-radius: 5px;
+      /* color: #141414; */
+      border: 1px solid #1a1918;
+      padding: 12px 26px;
+      outline: 0;
+      margin-left: 5px;
+      margin-right: 5px;
+      transition: all ease-in 0.2s;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    #ageverify_overlay {
+      width: 100px;
+      height: 100px;
+      transform: translate(-50%, -50%);
+    }
+
+    #ageverify_overlay img {
+      width: 60px;
+    }
+
+    #ageverify_content {
+      height: 350px;
+    }
+
+    #ageverify_content h2 {
+      color: #ffffff;
+      padding-top: 60px;
+      font-size: 30px;
+      text-align: center;
+    }
+    
+    #ageverify_content h2::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 230px;
+      border-top: 3px solid white;
+      width: 66px;
+    }
+
+
+    #ageverify_content #ageverify_choices {
+      margin-top: 35px;
+    }
+    #ageverify_content #age #ageverify_choices a {
+      display: inline-block;
+      border-radius: 5px;
+      /* color: #141414; */
+      border: 1px solid #1a1918;
+      padding: 10px 30px;
+      outline: 0;
+      margin-left: 5px;
+      margin-right: 5px;
+      transition: all ease-in 0.2s;
+      text-decoration: none;
+    }
+    
+    #ageverify_content p {
+      color: #ffffff;
+      font-size: 20px;
+      padding-top: 15px;
+    }
+
+    #ageverify_content #age span {
+      font-size: 25px;
+    }
+
+    #ageverify_content #age::before {
+      content: "";
+      position: absolute;
+      top: 229px;
+      left: 44%;
+      transform: rotate(180deg);
+      border-left: 18px solid transparent;
+      border-right: 18px solid transparent;
+      border-bottom: 20px solid #000;
+    }
+
+    #ageverify_content #age p {
+      font-size: 15px !important;
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Verify</title>
+
+    <link rel="stylesheet" href="./popup.css" />
+
+    <!-- <style type='text/css'>
+        #ageverify_content #ageverify_choices{margin-top:30px}
+        #ageverify_content #ageverify_choices a{
+          display:inline-block;border-radius:5px;color:#fece14;border:1px solid #fece14;padding:8px 40px;outline:0;margin-left:20px;transition:all ease-in .2s; text-decoration: none;}
+        #ageverify_content #ageverify_choices a:hover{background:#fece14;transition:all ease-in .2s;color:#000;border:1px solid #000}
+        #ageverify_overlay{width:100%;height:100%;position:fixed;left:0;top:0;z-index:100002;border:0;background-color:#222;opacity:.75;display:none}
+        #ageverify_content{
+          max-width:500px;width:90%;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:100003;text-align:center;
+          background-color:#181818;color:#3c3c3c;font-size:16px;padding:25px;border-radius:0;display:none}#ageverify_content h2{font-size:24px;color:#fece14}
+        #ageverify_content p,#ageverify_content span{color:#fece14}
+      </style> -->
+  </head>
+  <body>
+    
+    <div id="ageverify_content">
+      <div id="ageverify_overlay">
+        <!-- <img src="150px.png" alt="Logo" /> -->
+        <img src="10.jpg" alt="Logo" />
+        <!-- <img src="900.jpg" alt="Logo" /> -->
+      </div>
+      <div id="header">
+        <h2 style="margin: 0 0 20px 0">Please verify your age</h2>
+        <p style="margin: 0 0 20px 0">Products are for tobacco use only.</p>
+      </div>
+      <div id="age">
+        <span>Are you 21 or older?</span>
+        <div id="ageverify_choices">
+          <a href="#" class="ageverify_yes">Yes</a>
+          <a href="#" class="ageverify_no">No</a>
+        </div>
+        <p id="terms">
+          By entering this site you are agreeing to the Terms of Use and
+          privacy policy.
+        </p>
+      </div>
+    </div>
+
+    <!-- Cookie Library Itself -->
+    <!-- <script>
+      !function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e=e||self,function() {var n=e.Cookies,r=e.Cookies=t();r.noConflict=function(){return e.Cookies=n,r}}())}(this,function() {"use strict";function e(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)e[r]=n[r]}return e}var t={read:function(e) {return e.replace(/(%[\dA-F]{2})+/gi,decodeURIComponent)},write:function(e) {return encodeURIComponent(e).replace(/%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g,decodeURIComponent)}};return function n(r,o){function i(t,n,i) {if("undefined"!=typeof document){"number"==typeof(i=e({},o,i)).expires&&(i.expires=new Date(Date.now()+864e5*i.expires)),i.expires&&(i.expires=i.expires.toUTCString()),t=encodeURIComponent(t).replace(/%(2[346B]|5E|60|7C)/g,decodeURIComponent).replace(/[()]/g,escape),n=r.write(n,t); var c="";for(var u in i)i[u]&&(c+="; "+u,!0!==i[u]&&(c+="="+i[u].split(";")[0]));return document.cookie=t+"="+n+c}}return Object.create({set:i,get:function(e){if("undefined"!=typeof document&&(!arguments.length||e)){for(var n=document.cookie?document.cookie.split("; "):[],o={},i=0;i<n.length;i++){var c=n[i].split("="),u=c.slice(1).join("=");'"'===u[0]&&(u=u.slice(1,-1));try{var f=t.read(c[0]);if(o[f]=r.read(u,f),e===f)break}catch(e){}}return e?o[e]:o}},remove:function(t,n){i(t,"",e({},n,{expires:-1}))},withAttributes:function(t){return n(this.converter,e({},this.attributes,t))},withConverter:function(t){return n(e({},this.converter,t),this.attributes)}},{attributes:{value:Object.freeze(o)},converter:{value:Object.freeze(r)}})}(t,{path:"/"})});
+    
+    </script>
+
+    <script type="text/javascript" defer="defer">
+    const cookieBg = document.querySelector('#ageverify_overlay');
+    const cookieBox = document.querySelector('#ageverify_content');
+    const cookieYesBtn = document.querySelector('.ageverify_yes');
+    const cookieNoBtn = document.querySelector('.ageverify_no');
+    var expiryTime = new Date(new Date().getTime() + 24 * 60 * 60 * 1000); // Expires in 24h
+    
+    if(!Cookies.get('age_verify')){
+        cookieBg.style.display = "block";
+        cookieBox.style.display = "block";
+    }
+    
+    cookieYesBtn.addEventListener("click", function(e){
+        e.preventDefault();
+        cookieBg.style.display = "none";
+        cookieBox.style.display = "none";
+        console.log("Cookie Closed")
+        Cookies.set('age_verify','true', {expires: expiryTime});
+    })
+    cookieNoBtn.addEventListener("click", function(e){
+        e.preventDefault();
+            window.location.href = "https://www.instagram.com/honeybee_herb710/";
+    })
+    </script> -->
+  </body>
+</html>

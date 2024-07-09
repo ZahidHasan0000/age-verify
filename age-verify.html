@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Verify</title>
+
+    <style type="text/css">
+      #overall-wenexus-ageverify_content #overall-wenexus-ageverify_choices {
+        margin: 25px 0;
+      }
+      #overall-wenexus-ageverify_content
+        #age
+        #overall-wenexus-ageverify_choices
+        a {
+        display: inline-block;
+        border-radius: 5px;
+        border: 1px solid #1a1918;
+        padding: 12px 40px;
+        outline: 0;
+        margin-left: 5px;
+        margin-right: 5px;
+        transition: all ease-in 0.2s;
+        text-decoration: none;
+      }
+      #overall-wenexus-ageverify_content
+        #age
+        #overall-wenexus-ageverify_choices
+        a:hover {
+        background: #fece14;
+        transition: all ease-in 0.2s;
+        color: #000;
+        border: 1px solid #000;
+      }
+      #overall-wenexus-ageverify_overlay {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100002;
+        border: 0;
+        background-color: #222;
+        opacity: 0.75;
+        display: none;
+      }
+
+      #overall-wenexus-ageverify_content {
+        max-width: 600px;
+        width: 100%;
+        position: fixed;
+        z-index: 100003;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        display: grid;
+      }
+
+      #overall-wenexus-ageverify_content #overall-wenexus-header {
+        background-color: #181818;
+        border-radius: 15px 15px 0px 0px;
+        padding: 100px 0 40px;
+      }
+
+      #overall-wenexus-ageverify_content h2 {
+        color: #ffffff;
+        font-size: 35px;
+        text-align: center;
+        margin: 0;
+        position: relative;
+      }
+
+      #overall-wenexus-ageverify_content h2::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+        border-top: 3px solid white;
+        width: 80px;
+      }
+
+      #overall-wenexus-ageverify_content p {
+        color: #ffffff;
+        font-size: 22px;
+        margin: 30px 0 0;
+      }
+      #overall-wenexus-ageverify_logo-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #overall-wenexus-ageverify_logo {
+        background: #fece14;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: -75px;
+      }
+
+      #overall-wenexus-ageverify_logo img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        padding: 6px;
+        box-sizing: border-box;
+      }
+
+      #overall-wenexus-ageverify_choices {
+        color: #111110;
+        font-size: 25px;
+        background-color: #fece14;
+        width: 100%;
+      }
+
+      #overall-wenexus-ageverify_content #age {
+        background-color: #fece14;
+        border-radius: 0px 0px 15px 15px;
+        padding: 25px 0;
+        position: relative;
+      }
+      #overall-wenexus-ageverify_content #age span {
+        font-size: 28px;
+        font-weight: 700;
+      }
+      #overall-wenexus-ageverify_content #age::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        border-left: 26px solid transparent;
+        border-right: 26px solid transparent;
+        border-top: 26px solid #181818;
+        transform: translate(-50%, -50%);
+      }
+
+      .overall-wenexus-ageverify_yes {
+        background-color: #6bb52f;
+        color: black;
+        width: 60px;
+      }
+
+      .overall-wenexus-ageverify_no {
+        background-color: black;
+        color: white;
+        width: 60px;
+      }
+
+      #overall-wenexus-ageverify_content
+        #age
+        #overall-wenexus-ageverify_choices
+        .overall-wenexus-ageverify_yes:hover {
+        background-color: green;
+        color: white;
+        border-color: green;
+      }
+
+      #overall-wenexus-ageverify_content
+        #age
+        #overall-wenexus-ageverify_choices
+        .overall-wenexus-ageverify_no:hover {
+        background-color: black;
+        color: white;
+        border-color: black;
+      }
+
+      #overall-wenexus-ageverify_content #age p {
+        color: #000 !important;
+        font-size: 20px;
+      }
+
+      @media (max-width: 767px) {
+        #overall-wenexus-ageverify_content #overall-wenexus-header {
+          padding: 90px 0 30px;
+        }
+        #overall-wenexus-ageverify_content
+          #age
+          #overall-wenexus-ageverify_choices
+          a {
+          padding: 12px 30px;
+          font-size: 20px;
+        }
+        #overall-wenexus-ageverify_content {
+          width: 90%;
+        }
+        #overall-wenexus-ageverify_content h2 {
+          font-size: 28px;
+        }
+        #overall-wenexus-ageverify_content p {
+          font-size: 20px;
+        }
+        #overall-wenexus-ageverify_logo {
+          width: 130px;
+          height: 130px;
+          margin-bottom: -70px;
+        }
+        #overall-wenexus-ageverify_content #age {
+          padding: 25px 15px;
+        }
+        #overall-wenexus-ageverify_content #age p {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="overall-wenexus-ageverify_overlay"></div>
+    <div id="overall-wenexus-ageverify_content">
+      <div id="overall-wenexus-ageverify_logo-container">
+        <div id="overall-wenexus-ageverify_logo">
+          <img
+            src="https://cdn.shopify.com/s/files/1/1652/8827/files/150px.png"
+            alt="Logo"
+          />
+        </div>
+      </div>
+      <div id="overall-wenexus-header">
+        <h2>Please verify your age</h2>
+        <p>Products are for tobacco use only.</p>
+      </div>
+      <div id="age">
+        <span>Are you 21 or older?</span>
+        <div id="overall-wenexus-ageverify_choices">
+          <a href="#" class="overall-wenexus-ageverify_yes">Yes</a>
+          <a href="#" class="overall-wenexus-ageverify_no">No</a>
+        </div>
+        <p id="terms">
+          By entering this site you are agreeing to the Terms of Use and privacy
+          policy.
+        </p>
+      </div>
+    </div>
+
+    <!-- Cookie Library Itself -->
+    <script>
+      !(function (e, t) {
+        "object" == typeof exports && "undefined" != typeof module
+          ? (module.exports = t())
+          : "function" == typeof define && define.amd
+          ? define(t)
+          : ((e = e || self),
+            (function () {
+              var n = e.Cookies,
+                r = (e.Cookies = t());
+              r.noConflict = function () {
+                return (e.Cookies = n), r;
+              };
+            })());
+      })(this, function () {
+        "use strict";
+        function e(e) {
+          for (var t = 1; t < arguments.length; t++) {
+            var n = arguments[t];
+            for (var r in n) e[r] = n[r];
+          }
+          return e;
+        }
+        var t = {
+          read: function (e) {
+            return e.replace(/(%[\dA-F]{2})+/gi, decodeURIComponent);
+          },
+          write: function (e) {
+            return encodeURIComponent(e).replace(
+              /%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g,
+              decodeURIComponent
+            );
+          },
+        };
+        return (function n(r, o) {
+          function i(t, n, i) {
+            if ("undefined" != typeof document) {
+              "number" == typeof (i = e({}, o, i)).expires &&
+                (i.expires = new Date(Date.now() + 864e5 * i.expires)),
+                i.expires && (i.expires = i.expires.toUTCString()),
+                (t = encodeURIComponent(t)
+                  .replace(/%(2[346B]|5E|60|7C)/g, decodeURIComponent)
+                  .replace(/[()]/g, escape)),
+                (n = r.write(n, t));
+              var c = "";
+              for (var u in i)
+                i[u] &&
+                  ((c += "; " + u),
+                  !0 !== i[u] && (c += "=" + i[u].split(";")[0]));
+              return (document.cookie = t + "=" + n + c);
+            }
+          }
+          return Object.create(
+            {
+              set: i,
+              get: function (e) {
+                if (
+                  "undefined" != typeof document &&
+                  (!arguments.length || e)
+                ) {
+                  for (
+                    var n = document.cookie ? document.cookie.split("; ") : [],
+                      o = {},
+                      i = 0;
+                    i < n.length;
+                    i++
+                  ) {
+                    var c = n[i].split("="),
+                      u = c.slice(1).join("=");
+                    '"' === u[0] && (u = u.slice(1, -1));
+                    try {
+                      var f = t.read(c[0]);
+                      if (((o[f] = r.read(u, f)), e === f)) break;
+                    } catch (e) {}
+                  }
+                  return e ? o[e] : o;
+                }
+              },
+              remove: function (t, n) {
+                i(t, "", e({}, n, { expires: -1 }));
+              },
+              withAttributes: function (t) {
+                return n(this.converter, e({}, this.attributes, t));
+              },
+              withConverter: function (t) {
+                return n(e({}, this.converter, t), this.attributes);
+              },
+            },
+            {
+              attributes: { value: Object.freeze(o) },
+              converter: { value: Object.freeze(r) },
+            }
+          );
+        })(t, { path: "/" });
+      });
+    </script>
+
+    <script type="text/javascript" defer="defer">
+      const cookieBg = document.querySelector(
+        "#overall-wenexus-ageverify_overlay"
+      );
+      const cookieBox = document.querySelector(
+        "#overall-wenexus-ageverify_content"
+      );
+      const cookieYesBtn = document.querySelector(
+        ".overall-wenexus-ageverify_yes"
+      );
+      const cookieNoBtn = document.querySelector(
+        ".overall-wenexus-ageverify_no"
+      );
+      var expiryTime = new Date(new Date().getTime() + 24 * 60 * 60 * 1000); // Expires in 24h
+
+      if (!Cookies.get("age_verify")) {
+        cookieBg.style.display = "block";
+        cookieBox.style.display = "block";
+      }
+
+      cookieYesBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        cookieBg.style.display = "none";
+        cookieBox.style.display = "none";
+        console.log("Cookie Closed");
+        Cookies.set("age_verify", "true", { expires: expiryTime });
+      });
+      cookieNoBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = "https://www.instagram.com/honeybee_herb710/";
+      });
+    </script>
+  </body>
+</html>
